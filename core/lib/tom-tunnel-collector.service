@@ -1,0 +1,11 @@
+[Unit]
+Description=TOM_TUNNEL traffic collector
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3 /usr/local/lib/tom_tunnel/traffic_collector.py
+Nice=10
+
+[Install]
+WantedBy=multi-user.target
